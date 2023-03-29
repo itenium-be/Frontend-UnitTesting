@@ -4,7 +4,6 @@ import Holidays from 'date-holidays';
 
 const hd = new Holidays('BE');
 
-
 export function getWorkdaysInMonth(year: number, month: number): number {
   // TODO: This is immensely unperformant
   // TODO: Once the tests have been written,
@@ -16,7 +15,9 @@ export function getWorkdaysInMonth(year: number, month: number): number {
   while (date.getMonth() === month) {
     // date.getDay = index of ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
     if (date.getDay() !== 0 && date.getDay() !== 6) {
+      // console.time('isHoliday');
       const isHoliday = hd.isHoliday(date);
+      // console.timeEnd('isHoliday');
       if (!isHoliday) {
         result.push(date);
       }

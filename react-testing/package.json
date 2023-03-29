@@ -5,6 +5,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --transformIgnorePatterns \"node_modules/(?!astronomia)/\"",
+    "test:debug": "react-scripts --inspect-brk test --runInBand --no-cache --transformIgnorePatterns \"node_modules/(?!astronomia)/\"",
     "eject": "react-scripts eject"
   },
   "dependencies": {
