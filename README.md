@@ -8,7 +8,11 @@ You can never go wrong with **Jasmine** when doing frontend testing.
 
 - [Project with all common usage as running tests](https://github.com/itenium-be/jasmine-tut)
 - [Blog post series on Jasmine](https://itenium.be/blog/javascript/javascript-testing-jasmine-getting-started/)
+- [Blog migrating from Jasmine to Jest](https://itenium.be/blog/javascript/javascript-testing-jasmine-to-jest/)
 - [AVA: an alternative test runner](https://itenium.be/blog/javascript/ava-tutorial/)
+
+
+Exercises are detailed below or in the [Github Discussions](https://github.com/itenium-be/Frontend-UnitTesting/discussions)
 
 
 Jest
@@ -18,6 +22,7 @@ Facebook test runner for React. Stole Mocha's mojo.
 Syntax is largely identical to Jasmine.
 
 - [Jest Community](https://github.com/jest-community)
+- [Jest Docs](https://jestjs.io/docs/getting-started)
 
 
 ### Debugging
@@ -37,3 +42,47 @@ Put a `debugger;` and use the [Node.js V8 --inspector Manager] extension.
 [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=Orta.vscode-jest)
 
 See `.vscode/launch.json`.
+
+
+### Jest Exercise
+
+- `react-testing/src/date-holidays`: Is it time to fix the date-holidays performance issue permanently, TDD style?
+
+
+### Express Exercises
+
+See [confac](https://github.com/itenium-be/confac)  
+Tag: `jest-start`  
+Entrypoint: /backend/src/controllers/tests/  
+
+- `0-config-templates.test.ts`: Mocking the FileSystem (easy)
+- `0-user-verify.test.ts`: Mocking the google-auth-library (easy)
+- `1-clients.test.ts`: Manual Express Mocking (easy)
+- `2-consultants.test.ts`: Switching to [`mongodb-memory-server`](https://github.com/nodkz/mongodb-memory-server) from our poor-man `fakeDb` implementation (medium)
+- `3-projectsMonth.test.ts`: Mocking Express with [`supertest`](https://github.com/ladjs/supertest) (medium)
+- `4-projectsMonth.test.ts`: Bringing it all together (medium)
+- `7-deleteInvoiceController.test.ts`: You're on your own now (hard)
+- `8-createInvoiceController.test.ts`: A whole bunch of mocking (hard)
+- `9-emailInvoiceController.test.ts`: Buffers, merging, lots of fun (hard)
+
+
+React
+-----
+
+There are [three ways to test React](https://stackoverflow.com/a/54153026/540352) components:
+
+**ReactTestUtils**: The most barebone API, the other 2 are built on top of this  
+- [`react-dom/test-utils`](https://legacy.reactjs.org/docs/test-utils.html)
+- [`react-test-renderer`](https://legacy.reactjs.org/docs/test-renderer.html)
+
+**react-testing-library**:
+
+What we will be using.  
+- [Official Docs](https://testing-library.com/docs/react-testing-library/intro/)
+- [react-testing-library](https://github.com/testing-library/react-testing-library)
+- [Jest Tutorial](https://jestjs.io/docs/tutorial-react)
+
+**Enzyme**:
+
+The React team no longer recommends the [Enzyme](https://github.com/enzymejs/enzyme/)
+library as their primary choice for React testing.
