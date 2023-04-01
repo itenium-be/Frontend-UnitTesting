@@ -4,6 +4,14 @@ import Holidays from 'date-holidays';
 
 const hd = new Holidays('BE');
 
+
+export function getWorkdaysInCurrentMonth(): number {
+  const now = new Date();
+  return getWorkdaysInMonth(now.getFullYear(), now.getMonth());
+}
+
+
+
 export function getWorkdaysInMonth(year: number, month: number): number {
   // TODO: This is immensely unperformant
   // TODO: Once the tests have been written,
