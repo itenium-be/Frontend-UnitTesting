@@ -23,6 +23,7 @@ Syntax is largely identical to Jasmine.
 
 - [Jest Community](https://github.com/jest-community)
 - [Jest Docs](https://jestjs.io/docs/getting-started)
+- [Jest Cheat Sheet](https://github.com/sapegin/jest-cheat-sheet)
 
 
 ### Debugging

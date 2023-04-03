@@ -28,12 +28,12 @@ function Header({setPage}: HeaderProps) {
       <div className="container-fluid">
         <a className="navbar-brand" onClick={() => setPage('home')}>
           <img src="/favicon.png" style={{marginRight: 18, width: 24}} alt="itenium logo" />
-          React Testing
+          UnitTesting React
         </a>
         <div className="collapse navbar-collapse">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link active" onClick={() => setPage('sample-card')}>Basic Card</a>
+              <a className="nav-link active" onClick={() => setPage('sample-card')}>Enquete</a>
             </li>
           </ul>
         </div>

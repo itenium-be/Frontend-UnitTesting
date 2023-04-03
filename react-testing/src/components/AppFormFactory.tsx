@@ -1,5 +1,5 @@
 import { SampleCard } from "../pages/SampleCard";
-import { Home } from "./Home";
+import { Home } from "../pages/Home";
 
 
 export type Exercises = 'home' | 'sample-card';

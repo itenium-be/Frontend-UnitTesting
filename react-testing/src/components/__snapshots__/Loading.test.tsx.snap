@@ -1,0 +1,157 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loading screen can change the spinner color 1`] = `
+Array [
+  "Loading...",
+  <br />,
+  <wired-spinner
+    style={
+      Object {
+        "color": "red",
+      }
+    }
+  />,
+  <wired-divider
+    style={
+      Object {
+        "marginTop": 20,
+      }
+    }
+  />,
+  <div
+    style={
+      Object {
+        "paddingTop": 32,
+      }
+    }
+  >
+    <h3>
+      Change Properties
+    </h3>
+    <wired-checkbox />
+     Running?
+    <br />
+    Duration:
+    <wired-input
+      style={
+        Object {
+          "width": 100,
+        }
+      }
+    />
+    <br />
+    Color:
+    <wired-input
+      style={
+        Object {
+          "width": 100,
+        }
+      }
+    />
+  </div>,
+]
+`;
+
+exports[`Loading screen can change the spinner color 2`] = `
+Array [
+  "Loading...",
+  <br />,
+  <wired-spinner
+    style={
+      Object {
+        "color": "green",
+      }
+    }
+  />,
+  <wired-divider
+    style={
+      Object {
+        "marginTop": 20,
+      }
+    }
+  />,
+  <div
+    style={
+      Object {
+        "paddingTop": 32,
+      }
+    }
+  >
+    <h3>
+      Change Properties
+    </h3>
+    <wired-checkbox />
+     Running?
+    <br />
+    Duration:
+    <wired-input
+      style={
+        Object {
+          "width": 100,
+        }
+      }
+    />
+    <br />
+    Color:
+    <wired-input
+      style={
+        Object {
+          "width": 100,
+        }
+      }
+    />
+  </div>,
+]
+`;
+
+exports[`Loading screen renders "Loading... by default 1`] = `
+Array [
+  "Loading...",
+  <br />,
+  <wired-spinner
+    style={
+      Object {
+        "color": "red",
+      }
+    }
+  />,
+  <wired-divider
+    style={
+      Object {
+        "marginTop": 20,
+      }
+    }
+  />,
+  <div
+    style={
+      Object {
+        "paddingTop": 32,
+      }
+    }
+  >
+    <h3>
+      Change Properties
+    </h3>
+    <wired-checkbox />
+     Running?
+    <br />
+    Duration:
+    <wired-input
+      style={
+        Object {
+          "width": 100,
+        }
+      }
+    />
+    <br />
+    Color:
+    <wired-input
+      style={
+        Object {
+          "width": 100,
+        }
+      }
+    />
+  </div>,
+]
+`;

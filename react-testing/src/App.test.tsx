@@ -4,7 +4,7 @@ import { App } from './App';
 it('renders link', () => {
   render(<App />);
 
-  const linkElement = screen.getByText(/React Testing/i);
+  const linkElement = screen.getByText(/UnitTesting React/i);
   expect(linkElement).toBeInTheDocument();
 });
 

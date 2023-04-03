@@ -1,4 +1,4 @@
-import { Loading } from "./Loading";
+import { Loading } from "../components/Loading";
 
 export function Home() {
   return (
@@ -13,12 +13,17 @@ export function Home() {
         <br />
         <h2>This is Part 2</h2>
         React Component testing with <code>Jest</code> and <code>react-testing-library</code>
-      </div>
-      <div className="col-6">
-        <h1>Exercises 1</h1>
+
+        <br />
+        <br />
         <h3>Wired Elements</h3>
         See the <code>WiredInput</code> for type safety workaround.
 
+
+      </div>
+      <div className="col-6">
+        <h1>Exercises 1</h1>
+        <h3>The Loading Component</h3>
         <Loading />
       </div>
     </>
