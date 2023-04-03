@@ -87,3 +87,23 @@ What we will be using.
 
 The React team no longer recommends the [Enzyme](https://github.com/enzymejs/enzyme/)
 library as their primary choice for React testing.
+
+
+### Wired Elements
+
+This was a really bad idea.  
+But it looks pretty cool.
+
+- [Showcase](https://wiredjs.com/): Use this as an entrypoint to their documentation (upper right icon)
+- [Github Repo](https://github.com/rough-stuff/wired-elements)
+- [Simple Sandbox example](https://codesandbox.io/embed/xrll5wyl8w): **really** basic.
+- [Bug: some Wired components crash](https://github.com/rough-stuff/wired-elements/issues/179): Slider, IconButton, Fab, ...
+- [React Wrappers for Web Components](https://github.com/lit/lit/tree/main/packages/labs/react)
+- [React and Web Components](https://coryrylan.com/blog/how-to-use-web-components-with-typescript-and-react)
+
+### The DOM
+
+- [DOM Queries](https://testing-library.com/docs/queries/about): See `0.Enquete.test.tsc`
+- [Fire Events](https://testing-library.com/docs/dom-testing-library/api-events/): fireEvent.click()
+- [jest-dom](https://github.com/testing-library/jest-dom): toBeInTheDocument etc
+- [shadow-dom-testing-library](https://github.com/konnorrogers/shadow-dom-testing-library): An additional package because WebComponents...

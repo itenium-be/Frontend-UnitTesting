@@ -5,11 +5,20 @@ import {
 } from '../components/wrappers/WiredElements';
 
 
-export function SampleCard() {
+export function Enquete() {
   const [name, setName] = useState('')
+  const [disabled, setDisabled] = useState(false)
 
-  function handleClick() {
-    window.alert(`Hello ${name}!`);
+  function submitEnquete() {
+    setDisabled(true);
+
+    // TODO capture the other form fields
+    const data = {
+      name,
+    };
+
+    // TODO: use fetch to call our backend?
+    window.alert(JSON.stringify(data));
   }
 
   return (
@@ -17,8 +26,12 @@ export function SampleCard() {
       <div className="col-6">
         <WiredCard elevation={5}>
           <h1>I am a Form</h1>
-          <section>
-            <WiredInput placeholder="Your name" value={name} onChange={evnt => setName(evnt.target?.value)} />
+          <section data-testid="form-section">
+            <WiredInput
+              value={name}
+              onChange={evnt => setName(evnt.target?.value)}
+              placeholder="Your name"
+            />
 
             <br />
             <br />
@@ -35,22 +48,36 @@ export function SampleCard() {
 
             <br />
             <br />
-            <h4>Question 2</h4>
+            <h4 title="Check YES!!">Question 2</h4>
             <span style={{marginRight: 18}}>Are you happy using that framework?</span>
             <WiredCheckbox /> YES!
 
             <br />
             <br />
-            <WiredButton elevation={2} onClick={handleClick}>
+            <WiredButton disabled={disabled} elevation={2} onClick={submitEnquete}>
               Submit
             </WiredButton>
+
+            <div style={{visibility: 'hidden'}}>
+              <label htmlFor="username-input">Username</label>
+              <input type="text" id="username-input" className="inpt" required />
+            </div>
           </section>
         </WiredCard>
       </div>
       <div className="col-6">
         <WiredCard elevation={3}>
           <h1>Exercises 2</h1>
-
+          <p>See <code>enquete.test.tsx</code></p>
+          <p>
+            After submitting the form, hide the enquete and
+            display a "Thank You" WiredCard instead!
+          </p>
+          <p>
+            All the form data has to be submitted to our
+            backend. Show a success/error message after
+            submitting the form.
+          </p>
         </WiredCard>
       </div>
     </>

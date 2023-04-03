@@ -5,7 +5,7 @@ import { WiredInput as _WiredInput } from 'wired-elements/lib/wired-input.js';
 
 type EventTargetWithValue = EventTarget & { value: string };
 
-interface ChangeEvent extends Omit<Event, 'target'> {
+export interface ChangeEvent extends Omit<Event, 'target'> {
   target: EventTargetWithValue
 }
 

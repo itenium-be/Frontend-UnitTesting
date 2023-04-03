@@ -33,7 +33,8 @@ describe('Loading screen', () => {
   })
 
   it('can change the spinner color', () => {
-    // TODO: should probably have a wired color picker of sorts
+    // TODO: should probably use the WiredColorCombo
+    // TODO: that component should have tests?
     const component = renderer.create(<Loading />);
     let tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -51,4 +52,9 @@ describe('Loading screen', () => {
   })
 
   it('can set a custom "Loading..." message', () => {})
+
+  it('can change the duration of the spinner', () => {
+    // TODO: This information is not actually present in the snapshot
+    // TODO: Can't use snapshot testing here!
+  })
 })

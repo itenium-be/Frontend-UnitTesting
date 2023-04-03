@@ -1,4 +1,4 @@
-import { SampleCard } from "../pages/SampleCard";
+import { Enquete } from "../pages/Enquete";
 import { Home } from "../pages/Home";
 
 
@@ -22,7 +22,7 @@ export function AppFormFactory({ page }: AppFormFactoryProps) {
 function ComponentFactory({ page }: AppFormFactoryProps) {
   switch (page) {
   case 'sample-card':
-    return <SampleCard />;
+    return <Enquete />;
 
   case 'home':
   default:
