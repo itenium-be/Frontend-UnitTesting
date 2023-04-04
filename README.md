@@ -103,7 +103,20 @@ But it looks pretty cool.
 
 ### The DOM
 
+- [Chrome Extension](https://chrome.google.com/webstore/detail/testing-playground/hejbmebodbijjdhflfknehhcgaklhano/related)
 - [DOM Queries](https://testing-library.com/docs/queries/about): See `0.Enquete.test.tsc`
 - [Fire Events](https://testing-library.com/docs/dom-testing-library/api-events/): fireEvent.click()
 - [jest-dom](https://github.com/testing-library/jest-dom): toBeInTheDocument etc
 - [shadow-dom-testing-library](https://github.com/konnorrogers/shadow-dom-testing-library): An additional package because WebComponents...
+
+
+Angular
+-------
+
+Protracter is being deprecated?
+
+- ReactiveForms testing
+- Component testing
+- Directive testing
+
+https://testing-angular.com/
