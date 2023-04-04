@@ -1,6 +1,9 @@
 Frontend UnitTesting
 ====================
 
+Things that could still be done:
+- Add tests to confac frontend...
+
 Jasmine
 -------
 
@@ -35,7 +38,7 @@ cd react-testing
 npm run debug:test
 ```
 
-Put a `debugger;` and use the [Node.js V8 --inspector Manager] extension.
+Put a `debugger;` and use the [Node.js V8 --inspector Manager](https://chrome.google.com/webstore/detail/nodejs-v8-inspector-manag/gnhhdgbaldcilmgcpfddgdbkhjohddkj?hl=en) extension.
 
 
 #### Visual Studio Code
