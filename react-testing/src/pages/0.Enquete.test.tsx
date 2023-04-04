@@ -45,7 +45,7 @@ describe('Submitting the Enquete', () => {
     const btn = await screen.findByShadowRole('button');
     expect(btn).toBeInTheDocument();
 
-    // The radios seem to have rendered as checkboxes too 😃
+    // The radios seem to have been rendered as checkboxes too 😃
     const inputs = await screen.findAllByShadowRole('checkbox')
     expect(inputs).toHaveLength(5)
 
@@ -115,7 +115,47 @@ describe('Submitting the Enquete', () => {
 
   it('can use regex', async () => {
     const rendered = render(<Enquete />);
-    const btns = rendered.queryAllByText(/Submit/i)
+    let btns = rendered.queryAllByText(/Submit/i)
     expect(btns).toHaveLength(3)
+
+    // Or partial, insensitive matching
+    btns = rendered.queryAllByText('Submit', {exact: false})
+    expect(btns).toHaveLength(3)
+
+    // Or match with a fn
+    btns = rendered.queryAllByText((content, element) => element?.tagName.toLowerCase() === 'wired-button' && content.startsWith('S'))
+    expect(btns).toHaveLength(1)
   });
+
+  it('has extra query options', async () => {
+    const rendered = render(<Enquete />)
+    let inputs = rendered.queryAllByRole('textbox')
+    expect(inputs).toHaveLength(0)
+
+    const byRoleOptions = {hidden: true};
+    inputs = rendered.queryAllByRole('textbox', byRoleOptions)
+    expect(inputs).toHaveLength(1)
+  });
+
+  it.skip('has (visual) debugging tools', async () => {
+    const btn = await screen.findByShadowRole('button');
+
+    // Not sure what's going on, do a pretty DOM print:
+    screen.debug(btn)
+
+    // Or, open interactively in your browser!
+    // It will log an url. This is very useful
+    screen.logTestingPlaygroundURL()
+    // Checkout https://testing-playground.com/ for an example
+
+    // There is also a Chrome extension:
+    // https://chrome.google.com/webstore/detail/testing-playground/hejbmebodbijjdhflfknehhcgaklhano/related
+  });
+
+  it('can still do things the old school way', () => {
+    // Can be handy, but rely on the other functions first!
+    const {container} = render(<Enquete />)
+    const section = container.querySelector('[data-testid="form-section"]')
+    expect(section).toBeInTheDocument();
+  })
 })

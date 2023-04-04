@@ -68,7 +68,7 @@ export function Enquete() {
       <div className="col-6">
         <WiredCard elevation={3}>
           <h1>Exercises 2</h1>
-          <p>See <code>enquete.test.tsx</code></p>
+          <p>See <code>0.Enquete.test.tsx</code></p>
           <p>
             After submitting the form, hide the enquete and
             display a "Thank You" WiredCard instead!

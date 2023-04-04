@@ -3,10 +3,11 @@ import { screen } from "shadow-dom-testing-library";
 import '@testing-library/jest-dom'
 import { Enquete } from './Enquete'
 
-// One (optional) additional package:
+// One additional package:
 // A higher level of abstraction for fireEvent
 // (in case fireEvent isn't cutting it for you anymore)
 // https://github.com/testing-library/user-event
+// ATTN: user.type() works better than fireEvent.change for the Web Components 😉
 import userEvent from '@testing-library/user-event';
 
 
@@ -16,7 +17,7 @@ describe('Submitting the Enquete', () => {
     global.alert = jest.fn();
   })
 
-  it('calls window.alert', async () => {
+  it('calls window.alert (Mocking)', async () => {
     const rendered = render(<Enquete />);
     const btn = await screen.findByShadowRole('button');
     expect(btn).toBeInTheDocument()
@@ -25,25 +26,46 @@ describe('Submitting the Enquete', () => {
     expect(global.alert).toHaveBeenCalled();
   })
 
-  it('disables the button once clicked', async () => {
-    const rendered = render(<Enquete />);
-    let btn = await screen.findByShadowRole('button');
-    expect(btn).toBeEnabled()
+  describe('disable the button once clicked', () => {
+    it('using fireEvent.click', async () => {
+      const rendered = render(<Enquete />);
+      let btn = await screen.findByShadowRole('button');
+      expect(btn).toBeEnabled()
 
-    fireEvent.click(rendered.getByText(/Submit/));
+      fireEvent.click(rendered.getByText(/Submit/));
 
-    btn = await screen.findByShadowRole('button');
-    expect(btn).toBeDisabled()
+      btn = await screen.findByShadowRole('button');
+      expect(btn).toBeDisabled()
+    })
+
+    it('using the user-event companion library', async () => {
+      const user = userEvent.setup()
+      const rendered = render(<Enquete />)
+      await user.click(rendered.getByText(/Submit/))
+      // There is also dblClick & tripleClick
+
+      const btn = await screen.findByShadowRole('button');
+      expect(btn).toBeDisabled()
+
+      // Full userEvent API:
+      // import { click, dblClick, tripleClick, hover, unhover, tab } from '../convenience';
+      // import { keyboard } from '../keyboard';
+      // import { copy, cut, paste } from '../clipboard';
+      // import { pointer } from '../pointer';
+      // import { clear, deselectOptions, selectOptions, type, upload } from '../utility';
+    })
   })
 
-  it.skip('alerts your name', async () => {
-    const rendered = render(<Enquete />);
+  it('alerts your name', async () => {
+    const user = userEvent.setup()
+    const rendered = render(<Enquete />)
 
-    const nameInput = await screen.findByShadowPlaceholderText('Your name')
-    fireEvent.change(nameInput, {target: {value: 'HACKERMAN'}})
-    fireEvent.click(rendered.getByText(/Submit/));
+    const nameInput = await screen.findByShadowRole('textbox')
+    await user.type(nameInput, 'HACKERMAN')
+    // More on user keyboard events:
+    // https://testing-library.com/docs/user-event/keyboard
 
-    expect(global.alert).toHaveBeenCalledWith(expect.stringContaining('name'));
+    await user.click(rendered.getByText(/Submit/));
     expect(global.alert).toHaveBeenCalledWith(expect.stringContaining('HACKERMAN'))
   })
 
@@ -60,5 +82,5 @@ describe('Submitting the Enquete', () => {
     // )
   })
 
-  it('does not hide the enquete and shows an error if the backend call fails', () => {})
+  it('does not hide the enquete but shows an error if the backend call fails', () => {})
 })
