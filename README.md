@@ -1,8 +1,6 @@
 Frontend UnitTesting
 ====================
 
-Things that could still be done:
-- Add tests to confac frontend...
 
 Jasmine
 -------
