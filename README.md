@@ -1,30 +1,7 @@
 Frontend UnitTesting
 ====================
 
-
-Jasmine
--------
-
-You can never go wrong with **Jasmine** when doing frontend testing.
-
-- [Project with all common usage as running tests](https://github.com/itenium-be/jasmine-tut)
-- [Blog post series on Jasmine](https://itenium.be/blog/javascript/javascript-testing-jasmine-getting-started/)
-- [Blog migrating from Jasmine to Jest](https://itenium.be/blog/javascript/javascript-testing-jasmine-to-jest/)
-- [AVA: an alternative test runner](https://itenium.be/blog/javascript/ava-tutorial/)
-
-
 Exercises are detailed below or in the [Github Discussions](https://github.com/itenium-be/Frontend-UnitTesting/discussions)
-
-
-Jest
-----
-
-Facebook test runner for React. Stole Mocha's mojo.
-Syntax is largely identical to Jasmine.
-
-- [Jest Community](https://github.com/jest-community)
-- [Jest Docs](https://jestjs.io/docs/getting-started)
-- [Jest Cheat Sheet](https://github.com/sapegin/jest-cheat-sheet)
 
 
 Vitest
@@ -54,12 +31,12 @@ See [Vitest Debugging](https://vitest.dev/guide/debugging.html) for more options
 
 #### Visual Studio Code
 
-[VS Code Extension](https://marketplace.visualstudio.com/items?itemName=Orta.vscode-jest)
+[VS Code Extension](https://marketplace.visualstudio.com/items?itemName=vitest.explorer)
 
 See `.vscode/launch.json`.
 
 
-### Jest Exercise
+### Exercise
 
 - `react-testing/src/date-holidays`: Is it time to fix the date-holidays performance issue permanently, TDD style?
 
@@ -79,6 +56,29 @@ Entrypoint: /backend/src/controllers/tests/
 - `7-deleteInvoiceController.test.ts`: You're on your own now (hard)
 - `8-createInvoiceController.test.ts`: A whole bunch of mocking (hard)
 - `9-emailInvoiceController.test.ts`: Buffers, merging, lots of fun (hard)
+
+
+Jest
+----
+
+Facebook's test runner that dominated the 2010s. Vitest is the modern successor with
+the same API. Understanding Jest helps when working with older codebases.
+
+- [Jest Community](https://github.com/jest-community)
+- [Jest Docs](https://jestjs.io/docs/getting-started)
+- [Jest Cheat Sheet](https://github.com/sapegin/jest-cheat-sheet)
+
+
+Jasmine
+-------
+
+The OG of JavaScript testing frameworks. Jest and Vitest inherited its `describe`/`it`/`expect` syntax.
+Still useful for understanding the lineage of modern test runners.
+
+- [Project with all common usage as running tests](https://github.com/itenium-be/jasmine-tut)
+- [Blog post series on Jasmine](https://itenium.be/blog/javascript/javascript-testing-jasmine-getting-started/)
+- [Blog migrating from Jasmine to Jest](https://itenium.be/blog/javascript/javascript-testing-jasmine-to-jest/)
+- [AVA: an alternative test runner](https://itenium.be/blog/javascript/ava-tutorial/)
 
 
 React
