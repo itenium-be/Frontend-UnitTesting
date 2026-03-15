@@ -26,14 +26,14 @@ function Header({setPage}: HeaderProps) {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
-        <a className="navbar-brand" onClick={() => setPage('home')}>
+        <button type="button" className="navbar-brand btn btn-link" onClick={() => setPage('home')}>
           <img src="/favicon.png" style={{marginRight: 18, width: 24}} alt="itenium logo" />
           UnitTesting React
-        </a>
+        </button>
         <div className="collapse navbar-collapse">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link active" onClick={() => setPage('sample-card')}>Enquete</a>
+              <button type="button" className="nav-link active btn btn-link" onClick={() => setPage('sample-card')}>Enquete</button>
             </li>
           </ul>
         </div>
