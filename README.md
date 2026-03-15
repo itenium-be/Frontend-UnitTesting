@@ -27,16 +27,29 @@ Syntax is largely identical to Jasmine.
 - [Jest Cheat Sheet](https://github.com/sapegin/jest-cheat-sheet)
 
 
+Vitest
+------
+
+This project uses [Vitest](https://vitest.dev/) as the test runner. Vitest provides a Jest-compatible API,
+so Jest knowledge transfers directly. If you know Jest, you know Vitest.
+
+- [Vitest Docs](https://vitest.dev/guide/)
+- [Migrating from Jest](https://vitest.dev/guide/migration.html#migrating-from-jest)
+
+
 ### Debugging
 
 #### Chrome
 
 ```sh
 cd react-testing
-npm run debug:test
+bun run test:debug
 ```
 
-Put a `debugger;` and use the [Node.js V8 --inspector Manager](https://chrome.google.com/webstore/detail/nodejs-v8-inspector-manag/gnhhdgbaldcilmgcpfddgdbkhjohddkj?hl=en) extension.
+Put a `debugger;` statement in your test and open `chrome://inspect` or use the
+[Node.js V8 --inspector Manager](https://chrome.google.com/webstore/detail/nodejs-v8-inspector-manag/gnhhdgbaldcilmgcpfddgdbkhjohddkj?hl=en) extension.
+
+See [Vitest Debugging](https://vitest.dev/guide/debugging.html) for more options.
 
 
 #### Visual Studio Code
