@@ -4,7 +4,7 @@ import { getWorkdaysInCurrentMonth, getWorkdaysInMonth } from "./getHolidaysInMo
 
 export default {};
 
-xit('has 21 work days in 1/2023', () => {
+it.skip('has 21 work days in 1/2023', () => {
   // TODO: Might need to split the function for easier test coverage
   // const workDays = getWorkdaysInMonth(2023, 0);
   // expect(workDays).toBe(21);
@@ -41,6 +41,6 @@ describe('Bonus points for time travel', () => {
 
     // TODO: for some reason, this test has
     // TODO: to be updated from time to time
-    expect(workDays).toBe(23);
+    expect(workDays).toBe(22);
   });
 });

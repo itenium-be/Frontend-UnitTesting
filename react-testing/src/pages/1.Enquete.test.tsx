@@ -2,6 +2,7 @@ import { fireEvent, render, waitFor } from '@testing-library/react';
 import { screen } from "shadow-dom-testing-library";
 import '@testing-library/jest-dom'
 import { Enquete } from './Enquete'
+import { vi } from 'vitest';
 
 // One additional package:
 // A higher level of abstraction for fireEvent
@@ -14,7 +15,7 @@ import userEvent from '@testing-library/user-event';
 describe('Submitting the Enquete', () => {
   beforeEach(() => {
     // Because submitEnquete uses window.alert
-    global.alert = jest.fn();
+    global.alert = vi.fn();
   })
 
   it('calls window.alert (Mocking)', async () => {

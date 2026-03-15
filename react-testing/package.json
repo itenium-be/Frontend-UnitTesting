@@ -1,51 +1,38 @@
 {
   "name": "react-testing",
   "version": "0.1.0",
+  "type": "module",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --transformIgnorePatterns \"node_modules/(?!astronomia)/\"",
-    "test:debug": "react-scripts --inspect-brk test --runInBand --no-cache --transformIgnorePatterns \"node_modules/(?!astronomia)/\"",
-    "eject": "react-scripts eject"
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:debug": "vitest --inspect-brk --no-file-parallelism"
   },
   "dependencies": {
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^14.0.0",
-    "@testing-library/user-event": "^14.4.3",
     "date-holidays": "^3.19.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
     "wired-elements": "^3.0.0-rc.6",
     "wired-elements-react": "^0.1.5"
   },
   "devDependencies": {
-    "@types/jest": "^29.5.0",
-    "@types/node": "^18.15.10",
-    "@types/react": "^18.0.30",
-    "@types/react-dom": "^18.0.11",
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.1.0",
+    "@testing-library/user-event": "^14.4.3",
+    "@types/node": "^22.10.2",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
     "@types/react-test-renderer": "^18.0.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "jsdom": "^26.0.0",
     "react-test-renderer": "^18.2.0",
     "sass": "^1.60.0",
     "shadow-dom-testing-library": "^1.10.0",
-    "typescript": "^4.9.5"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "typescript": "~5.6.2",
+    "vite": "^6.0.3",
+    "vitest": "^3.0.4"
   }
 }

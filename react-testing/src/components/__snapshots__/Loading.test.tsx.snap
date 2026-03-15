@@ -1,26 +1,26 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Loading screen can change the spinner color 1`] = `
-Array [
+exports[`Loading screen > can change the spinner color 1`] = `
+[
   "Loading...",
   <br />,
   <wired-spinner
     style={
-      Object {
+      {
         "color": "red",
       }
     }
   />,
   <wired-divider
     style={
-      Object {
+      {
         "marginTop": 20,
       }
     }
   />,
   <div
     style={
-      Object {
+      {
         "paddingTop": 32,
       }
     }
@@ -34,7 +34,7 @@ Array [
     Duration:
     <wired-input
       style={
-        Object {
+        {
           "width": 100,
         }
       }
@@ -43,7 +43,7 @@ Array [
     Color:
     <wired-input
       style={
-        Object {
+        {
           "width": 100,
         }
       }
@@ -52,27 +52,27 @@ Array [
 ]
 `;
 
-exports[`Loading screen can change the spinner color 2`] = `
-Array [
+exports[`Loading screen > can change the spinner color 2`] = `
+[
   "Loading...",
   <br />,
   <wired-spinner
     style={
-      Object {
+      {
         "color": "green",
       }
     }
   />,
   <wired-divider
     style={
-      Object {
+      {
         "marginTop": 20,
       }
     }
   />,
   <div
     style={
-      Object {
+      {
         "paddingTop": 32,
       }
     }
@@ -86,7 +86,7 @@ Array [
     Duration:
     <wired-input
       style={
-        Object {
+        {
           "width": 100,
         }
       }
@@ -95,7 +95,7 @@ Array [
     Color:
     <wired-input
       style={
-        Object {
+        {
           "width": 100,
         }
       }
@@ -104,27 +104,27 @@ Array [
 ]
 `;
 
-exports[`Loading screen renders "Loading... by default 1`] = `
-Array [
+exports[`Loading screen > renders "Loading... by default 1`] = `
+[
   "Loading...",
   <br />,
   <wired-spinner
     style={
-      Object {
+      {
         "color": "red",
       }
     }
   />,
   <wired-divider
     style={
-      Object {
+      {
         "marginTop": 20,
       }
     }
   />,
   <div
     style={
-      Object {
+      {
         "paddingTop": 32,
       }
     }
@@ -138,7 +138,7 @@ Array [
     Duration:
     <wired-input
       style={
-        Object {
+        {
           "width": 100,
         }
       }
@@ -147,7 +147,7 @@ Array [
     Color:
     <wired-input
       style={
-        Object {
+        {
           "width": 100,
         }
       }
